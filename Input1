@@ -1,0 +1,12 @@
+## Basic math program. Adds two numbers together
+
+a = 10
+b = 17
+
+## this section adds the numbers together
+
+result = a + b
+
+## prints to output
+
+print(result)
