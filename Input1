@@ -1,12 +1,72 @@
-## Basic math program. Adds two numbers together
+#-------------------------------------------------------------
+#Project Basic_math
+#Written by - Lee, A.; Allison, J.
+#Original Project Date - 20 Oct 2016
+#Circle Math
+#-------------------------------------------------------------
 
-a = 10
-b = 17
+# Define the Constants
+PI = 3.145
+radius = 0
 
-## this section adds the numbers together
+#-------------------------------------------------------------
+#Function Name: computeArea
+# This function calculates the area of the circle
+# Parameters - radius
+# Returns - area
+#-------------------------------------------------------------
 
-result = a + b
+def computeArea(radius):
+    area = PI * (radius * radius)
+    return area
 
-## prints to output
 
-print(result)
+#-------------------------------------------------------------
+#Function Name: computeCircumference
+# This function calculates the perimiter of the circle
+# Parameters - radius
+# Returns - circumference
+#-------------------------------------------------------------
+
+def computeCircumference(radius):
+    circumference = 2 * radius * PI
+    return circumference
+
+#-------------------------------------------------------------
+#Function Name: show Menu
+# This function Shows the Menu
+# Parameters - none
+# Returns - choice
+#-------------------------------------------------------------
+
+def showMenu():
+    choice = 0
+    while choice not in ['1','2','3']:
+        print('Please choose whether to get the area or circumference.')
+        print('1: calculate area')
+        print('2: calculate circumference')
+        print('3: to quit')
+        choice = input()
+        
+    return choice
+
+
+# Display instructions
+
+
+# Set up loop
+while True:
+    userChoice = showMenu()
+    if userChoice == '3':
+        break
+    elif userChoice == '1':
+        userRadius = float(input('What is the radius?'))
+        print('The area of the circle is ' + str(computeArea(userRadius)) )
+
+    else:
+        userRadius = float(input('What is the radius?'))
+        print('The circumference of the circle is ' + str(computeCircumference(userRadius)) )
+
+print('Goodbye.')
+time.sleep(2)
+exit
