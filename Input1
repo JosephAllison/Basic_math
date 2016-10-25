@@ -68,4 +68,5 @@ while True:
         print('The circumference of the circle is ' + str(computeCircumference(userRadius)) )
 
 print('Goodbye.')
+time.sleep(2)
 exit
